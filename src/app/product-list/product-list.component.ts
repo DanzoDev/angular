@@ -13,7 +13,7 @@ export class ProductListComponent {
   share(product: any) {
     let me = products.find((product1: any) => product1.id === product);
     if (me !== undefined) {
-      me.description = 'POG';
+      me.description = 'POfG';
     }
   }
 }
