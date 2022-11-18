@@ -1,0 +1,25 @@
+<h2>Products</h2>
+
+<div ng-repeat="prod in products">
+  <div *ngFor="let product of products">
+    <h3>
+      <a [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+    <button type="button button-danger" disabled>$ {{ product.price }}</button>
+
+    <button type="button" (click)="share(product.id)">
+      change ({{ product.id }})
+    </button>
+  </div>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
